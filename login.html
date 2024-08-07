@@ -5,8 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
     <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="navbar.css" />
   </head>
   <body>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <a href="index.html">MyApp</a>
+      </div>
+      <ul class="navbar-links" id="navbarLinks">
+        <li><a href="login.html">Login</a></li>
+        <li><a href="sign-up.html">Sign Up</a></li>
+        <li><a href="mood-tracker.html">Mood Tracker</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="therapist-list.html">Therapist List</a></li>
+      </ul>
+      <div class="navbar-toggle" id="navbarToggle">
+        <i class="bx bx-menu"></i>
+      </div>
+    </nav>
     <div class="login-container">
       <h1>Welcome Back!</h1>
       <p>Log in to your account</p>
@@ -43,5 +59,6 @@
     <script src="./alert.js"></script>
     <script src="./main-db.js"></script>
     <script src="login.js"></script>
+    <script src="navbar.js"></script>
   </body>
 </html>
