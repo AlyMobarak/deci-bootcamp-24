@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mood Tracker</title>
+    <link rel="stylesheet" href="mood-tracker.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Mood Tracker</h1>
+      <p class="notification">
+        Log your mood by selecting a category and specific mood. View your mood
+        history below.
+      </p>
+      <center><span id="loading">Loading... Please wait.</span></center>
+      <form id="mood-form" style="display: none">
+        <div class="form-group">
+          <label for="mainMood">Select Main Mood Category:</label>
+          <div class="custom-select" id="mainMoodSelect">
+            <div class="selected-option" id="mainMood">
+              -- Select a Main Mood --
+            </div>
+            <div class="dropdown-options" id="mainMoodOptions">
+              <!-- Main mood options will be populated by JavaScript -->
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subMood">Select Specific Mood:</label>
+          <div class="custom-select" id="subMoodSelect">
+            <div class="selected-option" id="subMood">
+              -- Select a Specific Mood --
+            </div>
+            <div class="dropdown-options" id="subMoodOptions">
+              <!-- Sub mood options will be populated dynamically -->
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="reason">Reason:</label>
+          <textarea
+            id="reason"
+            rows="3"
+            placeholder="Why do you feel this way?"
+          ></textarea>
+        </div>
+        <button type="submit">Log Mood</button>
+      </form>
+
+      <h2>Past Mood Logs</h2>
+      <div id="mood-logs" class="appointments-list">
+        <!-- Mood logs will be populated here -->
+      </div>
+    </div>
+
+    <script src="mood-tracker.js"></script>
+  </body>
+</html>

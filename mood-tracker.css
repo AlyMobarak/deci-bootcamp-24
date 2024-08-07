@@ -1,0 +1,131 @@
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.notification {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.custom-select {
+  position: relative;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.selected-option {
+  padding: 10px;
+  border-radius: 12px;
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 160px;
+  overflow-y: auto;
+  border: 0px solid #ccc;
+  border-radius: 12px;
+  background-color: white;
+  height: 0px;
+  z-index: 1000;
+  transition: height 0.3s;
+}
+
+.dropdown-options.active {
+  height: 160px; /* Show options when active */
+  border-width: 1px;
+}
+
+.dropdown-options div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-options div:hover {
+  background-color: #f0f0f0;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.appointments-list {
+  margin-top: 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  resize: vertical;
+}
+
+textarea:focus {
+  border-color: #4caf50;
+}
