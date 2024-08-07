@@ -24,7 +24,7 @@ async function displayTherapists() {
     console.log(therapist.education.forEach);
 
     therapistCard.innerHTML = `
-            <img src="./therapist-photos/${therapist.id}" alt="${
+            <img src="./therapist-photos/${therapist.id}.png" alt="${
       therapist.name
     }">
             <h2>${therapist.name}, ${therapist.age}</h2>
