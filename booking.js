@@ -144,59 +144,62 @@ async function s() {
 
     // Populate appointments list
     appointmentsList.innerHTML = "";
-    outgoing.forEach((appointment) => {
-      const therapistName = therapists.find(
-        (t) => t.id === appointment.data.to
-      ).name;
-      const appointmentItem = document.createElement("div");
-      appointmentItem.className = "appointment-item";
-      appointmentItem.dataset.id = appointment.id;
-      //   appointmentItem.textContent = `Appointment with ${therapistName} at ${appointment.data.date}, ${appointment.data.time}`;
-      icon = document.createElement("img");
-      icon.src = `./therapist-photos/${appointment.data.to}.png`;
-      icon.style.width = "96px";
-      icon.style.height = "96px";
-      icon.style.borderRadius = "16px";
+    outgoing
+      .sort((d, f) => d.data.date > f.data.date)
+      .forEach((appointment) => {
+        const therapistName = therapists.find(
+          (t) => t.id === appointment.data.to
+        ).name;
+        const appointmentItem = document.createElement("div");
+        appointmentItem.className = "appointment-item";
+        appointmentItem.dataset.id = appointment.id;
+        //   appointmentItem.textContent = `Appointment with ${therapistName} at ${appointment.data.date}, ${appointment.data.time}`;
+        icon = document.createElement("img");
+        icon.src = `./therapist-photos/${appointment.data.to}.png`;
+        icon.style.width = "96px";
+        icon.style.height = "96px";
+        icon.style.borderRadius = "16px";
 
-      info = document.createElement("div");
-      info.style.display = "flex";
-      info.style.flexDirection = "column";
-      info.style.justifyContent = "center";
-      info.style.alignItems = "start";
-      info.style.marginLeft = "12px";
-      //   info.style.gap = "8px";
-      aName = document.createElement("p");
-      aName.innerText = therapistName;
-      aName.style.margin = "4px 0px";
-      aName.style.fontWeight = "bold";
-      if (favorites.includes(appointment.data.to)) {
-        icon.style.border = "2px solid goldenrod";
-        aName.style.color = "goldenrod";
-      }
-      aGood = document.createElement("p");
-      aGood.innerText = `${appointment.data.topic}`;
-      aGood.style.margin = "4px 0px";
-      aDate = document.createElement("p");
-      aDate.innerText = `${appointment.data.date} @ ${appointment.data.time}`;
-      aDate.style.margin = "4px 0px";
+        info = document.createElement("div");
+        info.style.display = "flex";
+        info.style.flexDirection = "column";
+        info.style.justifyContent = "center";
+        info.style.alignItems = "start";
+        info.style.marginLeft = "12px";
+        //   info.style.gap = "8px";
+        aName = document.createElement("p");
+        aName.innerText = therapistName;
+        aName.style.margin = "4px 0px";
+        aName.style.fontWeight = "bold";
+        if (favorites.includes(appointment.data.to)) {
+          icon.style.border = "2px solid goldenrod";
+          aName.style.color = "goldenrod";
+        }
+        aGood = document.createElement("p");
+        aGood.innerText = `${appointment.data.topic}`;
+        aGood.style.margin = "4px 0px";
+        aDate = document.createElement("p");
+        aDate.innerText = `${appointment.data.date} @ ${appointment.data.time}`;
+        aDate.style.margin = "4px 0px";
 
-      info.appendChild(aName);
-      info.appendChild(aGood);
-      info.appendChild(aDate);
-      appointmentItem.appendChild(icon);
-      appointmentItem.appendChild(info);
-      delIcon = document.createElement("i");
-      delIcon.className = "bx bxs-trash";
-      // delIcon.style.marginLeft = "8px";
-      delIcon.style.cursor = "pointer";
-      delIcon.addEventListener("click", async () => {
-        await db.collection("appointments").doc(appointment.id).delete();
-        refreshAppointments();
+        info.appendChild(aName);
+        info.appendChild(aGood);
+        info.appendChild(aDate);
+        appointmentItem.appendChild(icon);
+        appointmentItem.appendChild(info);
+        delIcon = document.createElement("i");
+        delIcon.className = "bx bxs-trash";
+        // delIcon.style.marginLeft = "8px";
+        delIcon.style.cursor = "pointer";
+        delIcon.style.marginLeft = "auto";
+        delIcon.addEventListener("click", async () => {
+          await db.collection("appointments").doc(appointment.id).delete();
+          refreshAppointments();
+        });
+        delIcon.style.color = "red";
+        appointmentItem.appendChild(delIcon);
+        appointmentsList.appendChild(appointmentItem);
       });
-      delIcon.style.color = "red";
-      appointmentItem.appendChild(delIcon);
-      appointmentsList.appendChild(appointmentItem);
-    });
     incoming.forEach((appointment) => {
       const therapistName = therapists.find(
         (t) => t.id === appointment.data.initiator
