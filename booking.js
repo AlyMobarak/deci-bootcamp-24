@@ -185,6 +185,16 @@ async function s() {
       info.appendChild(aDate);
       appointmentItem.appendChild(icon);
       appointmentItem.appendChild(info);
+      delIcon = document.createElement("i");
+      delIcon.className = "bx bxs-trash";
+      // delIcon.style.marginLeft = "8px";
+      delIcon.style.cursor = "pointer";
+      delIcon.addEventListener("click", async () => {
+        await db.collection("appointments").doc(appointment.id).delete();
+        refreshAppointments();
+      });
+      delIcon.style.color = "red";
+      appointmentItem.appendChild(delIcon);
       appointmentsList.appendChild(appointmentItem);
     });
     incoming.forEach((appointment) => {

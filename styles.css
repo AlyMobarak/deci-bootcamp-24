@@ -1,12 +1,24 @@
 /* styles.css */
 
 body {
+  /* background-color: #317c35; */
   margin: 0;
   height: 100%;
   font-family: Arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
 }
 
-html {
+nav {
+  width: 100vw;
+}
+
+.navbar {
+  justify-content: center !important;
+}
+
+html,
+body {
   background-image: url("download (1).jfif"); /* Background image URL */
   background-size: cover; /* Ensure background image covers the entire viewport */
   background-position: center; /* Center the background image */
@@ -26,13 +38,6 @@ body {
   height: 100%; /* Ensure height is 100% */
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  background-color: aliceblue;
-  padding: 10px 20px;
-}
-
 .anchor {
   text-decoration: none;
   font-size: 20px;
@@ -50,9 +55,11 @@ nav {
   text-align: center;
 }
 
-.mood h2 {
+h2 {
+  padding-top: 40vh;
+  text-align: center;
   font-size: 40px;
-  color: rgb(59, 3, 133);
+  color: #317c35;
 }
 
 .container {

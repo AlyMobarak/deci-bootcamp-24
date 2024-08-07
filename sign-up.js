@@ -79,7 +79,9 @@ document.querySelector("#sign-up").addEventListener("click", async (e) => {
 });
 
 window.addEventListener("DOMContentLoaded", async function () {
-  if (auth.currentUser != null) {
-    window.location = "index.html";
-  }
+  setTimeout(() => {
+    if (auth.currentUser != null) {
+      window.location = "index.html";
+    }
+  }, 1000);
 });
