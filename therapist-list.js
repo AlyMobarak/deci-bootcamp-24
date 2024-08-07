@@ -21,8 +21,12 @@ async function displayTherapists() {
       //   alert(therapist.id);
     };
 
+    console.log(therapist.education.forEach);
+
     therapistCard.innerHTML = `
-            <img src="${therapist.photoURL}" alt="${therapist.name}">
+            <img src="./therapist-photos/${therapist.id}" alt="${
+      therapist.name
+    }">
             <h2>${therapist.name}, ${therapist.age}</h2>
             <p>${therapist.bio}</p>
             <p>Location: ${therapist.country.toUpperCase()}, ${
@@ -33,11 +37,18 @@ async function displayTherapists() {
       therapist.email
     }</a></p>
             <h3>Education</h3>
-            <ul>${therapist.education}</ul>
         `;
+    const educationList = document.createElement("ul");
+    therapist.education.forEach((education) => {
+      const educationItem = document.createElement("li");
+      educationItem.textContent = education;
+      educationList.appendChild(educationItem);
+    });
+    therapistCard.appendChild(educationList);
 
     listContainer.appendChild(therapistCard);
   });
+  document.getElementById("loading").style.display = "none";
 }
 
 window.addEventListener("DOMContentLoaded", async function () {

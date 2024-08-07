@@ -33,11 +33,11 @@ h1 {
 .therapist-card {
   background-color: #fafafa;
   padding: 15px;
-  border-radius: 8px;
+  border-radius: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: left;
   transition: all 0.3s;
-  border: #fafafa 0px solid;
+  border: #dcdcdc 2px solid;
 }
 
 .fav {
@@ -48,16 +48,17 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: url("star.png") 16 16, auto; /* Adjust coordinates if needed */
   background-color: #f5f5f5;
+  border-width: 4px;
 }
 
 .fav:hover {
-  border-width: 4px;
+  cursor: url("unfavorite.png") 16 16, auto; /* Adjust coordinates if needed */
 }
 
 .therapist-card img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 16px;
   margin-bottom: 10px;
 }
 

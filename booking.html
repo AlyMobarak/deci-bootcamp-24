@@ -1,27 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book with Doctors</title>
-    <link rel="stylesheet" href="style2.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Therapist Booking</title>
+    <link rel="stylesheet" href="booking.css" />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>Book with Doctors</h1>
-            <input type="text" id="searchBar" placeholder="Search for doctors..." />
-        </header>
-        <section class="book">
+      <h1>Book an Appointment</h1>
+      <p class="notification">
+        Select a therapist to book your appointment. Favorites are highlighted
+        in gold.
+      </p>
+      <center><span id="loading">Loading... Please wait.</span></center>
+      <form id="booking-form" style="display: none">
+        <div class="form-group">
+          <label for="therapist">Select Therapist:</label>
+          <div class="custom-select" id="custom-select">
+            <div class="selected-option" id="selected-option">
+              -- Select a Therapist --
+            </div>
+            <div class="dropdown-options" id="dropdown-options">
+              <!-- Options will be populated by JavaScript -->
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="topic">Enter Topic:</label>
+          <input type="text" id="topic" value="Regular CheckUp" required />
+        </div>
+        <div class="form-group">
+          <label for="date">Select Date:</label>
+          <input type="date" id="date" required />
+        </div>
+        <div class="form-group">
+          <label for="time">Select Time:</label>
+          <input type="time" id="time" required />
+        </div>
+        <button type="submit">Book Appointment</button>
+      </form>
+      <div class="appointments-container">
+        <div class="appointments-icon" id="appointments-icon">
+          <span class="icon">📅</span>
+          <span class="badge" id="appointment-count">0</span>
+        </div>
+        <button id="refresh-button" class="refresh-button">🔄 Refresh</button>
 
-            <form id="form">
- 
+        <div id="appointments-list" class="appointments-list">
+          <!-- Upcoming appointments will be populated here -->
+        </div>
+      </div>
 
-                <button type="submit">Search</button>
-            </form>
-        </section>
+      <div id="confirmation" class="confirmation"></div>
     </div>
 
-    <script src="script2.js"></script>
-</body>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="main-db.js"></script>
+    <script src="alert.js"></script>
+    <script src="booking.js"></script>
+  </body>
 </html>

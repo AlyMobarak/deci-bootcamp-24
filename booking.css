@@ -1,0 +1,229 @@
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.notification {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.custom-select {
+  position: relative;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.selected-option {
+  padding: 10px;
+  border-radius: 12px;
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 150px;
+  height: 0;
+  overflow-y: auto;
+  border: 0px solid #ccc;
+  border-radius: 12px;
+  background-color: white;
+  transition: height 0.3s;
+  /* z-index: 1000; */
+}
+
+.dropdown-options.active {
+  display: block;
+  height: 150px;
+  max-height: 150px !important;
+  border-width: 1px;
+}
+
+.dropdown-options div {
+  padding: 10px;
+  cursor: pointer;
+  /* background-color: white; Ensure visible */
+  display: block;
+  visibility: visible;
+  /* font-size: 12px; */
+}
+
+.dropdown-options div:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-options .favorite:hover {
+  background-color: rgb(190, 144, 27);
+}
+
+.favorite {
+  background-color: goldenrod;
+  font-weight: bold;
+  color: white;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #4caf50;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.confirmation {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #4caf50;
+}
+
+.appointments-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.appointments-icon {
+  position: relative;
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.icon {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -5px; /* Adjust position as needed */
+  right: -5px; /* Adjust position as needed */
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  /* padding: 2px 6px; Smaller padding for a tiny badge */
+  font-size: 10px; /* Smaller font size for the badge */
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.refresh-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  /* width: 120px; */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.refresh-button:hover {
+  background-color: #45a049;
+}
+
+.appointments-list {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  width: 300px;
+  padding: 0px 10px;
+  height: 0px;
+  transition: height 1s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: start;
+  overflow: hidden;
+}
+
+.appointments-list.active {
+  height: 50vh;
+}
+
+.appointment-item {
+  min-width: 280px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
