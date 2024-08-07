@@ -1,0 +1,107 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  background-image: url("download (1).jfif"); /* Background image URL */
+  background-size: cover; /* Ensure background image covers the entire viewport */
+  background-position: center; /* Center the background image */
+  background-attachment: fixed; /* Fix the background image in place */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  margin: 0; /* Remove default margin */
+  height: 100%; /* Ensure height is 100% */
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  /* background: linear-gradient(135deg, #f5f7fa, #c3cfe2); */
+}
+
+body {
+  margin: 0; /* Remove default margin */
+  height: 100%; /* Ensure height is 100% */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: aliceblue;
+  padding: 10px 20px;
+}
+
+.anchor {
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(83, 56, 158);
+}
+
+.mood {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.mood h2 {
+  font-size: 40px;
+  color: rgb(59, 3, 133);
+}
+
+.container {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0 5px;
+}
+
+select {
+  margin-bottom: 15px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+textarea {
+  margin-bottom: 15px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical; /* Allow vertical resizing only */
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: rgb(59, 3, 133);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(66, 45, 129);
+}
+footer {
+  background-color: rgb(59, 3, 133);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}

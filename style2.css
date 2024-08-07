@@ -1,0 +1,11 @@
+html {
+  background-image: url("download (1).jfif"); /* Background image URL */
+  background-size: cover; /* Ensure background image covers the entire viewport */
+  background-position: center; /* Center the background image */
+  background-attachment: fixed; /* Fix the background image in place */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  margin: 0; /* Remove default margin */
+  height: 100%; /* Ensure height is 100% */
+  font-family: "Arial", sans-serif;
+  /* background: linear-gradient(135deg, #f5f7fa, #c3cfe2); */
+}

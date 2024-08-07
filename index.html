@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mental health</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <nav>
+        <a href="" class="anchor">Mental Health</a>
+        <a href="#mood-tracker" class="anchor">Mood Tracking</a>
+        <a href="booking.html" class="anchor">Book your Therapy</a>
+        <a href="#aboutUs" class="anchor">About Us</a>
+      </nav>
+    </div>
+    <div>
+      <section class="mood">
+        <h2>Mood Tracker</h2>
+      </section>
+    </div>
+    <div class="container" id="mood-tracker">
+      <form id="moodForm">
+        <label for="mainMood">Select Mood:</label>
+        <select id="mainMood" name="mainMood" required>
+          <option value="">--Select a Mood--</option>
+          <option value="Happy">Happy</option>
+          <option value="Sad">Sad</option>
+          <option value="Angry">Angry</option>
+          <option value="Anxious">Anxious</option>
+          <option value="Curious">Curious</option>
+          <option value="Neutral">Neutral</option>
+          <option value="Fearful">Fearful</option>
+          <option value="Proud">Proud</option>
+          <option value="Complex">Complex</option>
+        </select>
+
+        <label for="subMood">Select Specific Mood:</label>
+        <select id="subMood" name="subMood" disabled required>
+          <option value="">--Select a Specific Mood--</option>
+        </select>
+
+        <h3>Why</h3>
+        <textarea
+          id="userFeelings"
+          name="userFeelings"
+          rows="4"
+          placeholder="Describe your feelings..."
+        ></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div>
+      <h2>About Us</h2>
+      <p id="aboutUs">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+        atque unde enim, fugiat autem doloribus velit asperiores commodi quis
+        praesentium mollitia natus eaque molestiae, sed labore consectetur,
+        tempore corrupti pariatur magnam laboriosam a eligendi reprehenderit!
+        Incidunt sit obcaecati eos non et laboriosam voluptatum praesentium, eum
+        quod porro rem sapiente ex cumque ipsam quae, est velit? Ipsam facere
+        quod nam veniam. Excepturi optio a consectetur temporibus quisquam,
+        laborum, laudantium accusantium amet voluptatibus sit animi. Quo, porro
+        veritatis ea praesentium reprehenderit quia cum modi nulla debitis
+        aliquid. Officia, optio sed libero vero minus deleniti, nesciunt quasi
+        quo harum temporibus totam quisquam reiciendis quod? Libero quam totam,
+        dolorum accusamus dicta nostrum sapiente, voluptate enim neque autem
+        iste ab voluptas numquam, labore quos? Id soluta nam suscipit
+        repudiandae maiores laudantium aspernatur earum quo veritatis explicabo
+        labore, libero repellat minus numquam reiciendis odio fugiat eos
+        necessitatibus voluptates nobis quae enim dolorem accusantium
+        cupiditate. Eum, voluptas.
+      </p>
+    </div>
+    <footer>
+      <p>@Mental Health.com</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="main-db.js"></script>
+    <script src="alert.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

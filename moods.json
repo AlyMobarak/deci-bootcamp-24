@@ -1,0 +1,62 @@
+{
+    "Happy": [
+      "Joyful",
+      "Ecstatic",
+      "Elated",
+      "Content",
+      "Proud",
+      "Grateful",
+      "Playful",
+      "Inspired"
+    ],
+    "Sad": [
+      "Disappointed",
+      "Melancholic",
+      "Nostalgic",
+      "Despondent",
+      "Lonely",
+      "Guilty",
+      "Devastated"
+    ],
+    "Angry": [
+      "Frustrated",
+      "Irritated",
+      "Enraged",
+      "Furious"
+    ],
+    "Anxious": [
+      "Nervous",
+      "Worried",
+      "Apprehensive",
+      "Overwhelmed"
+    ],
+    "Curious": [
+      "Inquisitive",
+      "Interested",
+      "Confused"
+    ],
+    "Neutral": [
+      "Apathetic",
+      "Indifferent",
+      "Bored",
+      "Detached",
+      "Tired"
+    ],
+    "Fearful": [
+      "Afraid",
+      "Terrified",
+      "Panic-stricken",
+      "Vulnerable"
+    ],
+    "Proud": [
+      "Confident",
+      "Self-satisfied",
+      "Triumphant"
+    ],
+    "Complex": [
+      "Ambivalent",
+      "Pensive",
+      "Resentful"
+    ]
+  }
+  
