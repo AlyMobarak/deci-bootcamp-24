@@ -15,6 +15,7 @@ document
       window.location = "index.html";
     } catch (e) {
       console.log(e);
+      giveAlert("Incorrect Email or Password.");
     }
   });
 
